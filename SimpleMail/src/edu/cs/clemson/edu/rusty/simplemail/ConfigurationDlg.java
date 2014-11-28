@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -22,17 +23,22 @@ public class ConfigurationDlg extends JDialog {
 	
     public ConfigurationDlg() {
     	buttons = new JPanel();
+        setSize(400, 500);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setModal(true);
     	buttons.setLayout(new FlowLayout());
     	JButton saveButton = new JButton("Save");
     	JButton cancelButton = new JButton("Cancel");
     	// Validate the data and update the DataStore
     	
+    	// Will do the saving in config 
     	saveButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {     
                String newEmail = emailAddressField.getText();
                // Validate email
                String newName = nameField.getText();
-               String newSmtpAddress = smtpAddressField.getText();      
+               String newSmtpAddress = smtpAddressField.getText(); 
+               
             }
          }); 
     	

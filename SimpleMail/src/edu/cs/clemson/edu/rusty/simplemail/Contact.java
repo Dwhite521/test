@@ -13,9 +13,9 @@ public class Contact implements Serializable{
 	
 	public Contact(String name, String postalAddress, String phoneNumber, String emailAddress) {
 		this.name = name;
-		this.postalAddress = postalAddress;
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
+		this.postalAddress = postalAddress;
 	}
 	public String getName() {
 		return name;
